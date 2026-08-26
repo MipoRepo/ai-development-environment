@@ -1,0 +1,119 @@
+site_name: AI Development Environment (AIDE)
+repo_url: https://github.com/aide-env/ai-development-environment
+repo_name: ai-development-environment
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  logo: material/logo
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - search.highlight
+    - search.share
+    - navigation.tracking
+    - navigation.tabs
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+plugins:
+  - search
+  - mermaid2:
+      arguments:
+        strict: true
+        flowchart:
+          diagramMargin: 10
+          fontSize: 16px
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+  - material/tags:
+      tags_file: tags.md
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
+
+extra:
+  version: 0.1.0
+  docs_url: https://aide-env.github.io/ai-development-environment/
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascript/extra.js
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - First Project: getting-started/first-project.md
+  - User Guide:
+      - Tasks: user-guide/tasks.md
+      - Orchestration: user-guide/orchestration.md
+      - Workflows: user-guide/workflows.md
+  - Concepts:
+      - Overview: concepts/overview.md
+      - Agent: concepts/agent.md
+      - Workflow: concepts/workflow.md
+  - Agents:
+      - Director: agents/director.md
+      - Project Manager: agents/project-manager.md
+      - Developer: agents/developer.md
+      - Tester: agents/tester.md
+      - Security: agents/security-architect.md
+      - Documentation: agents/technical-writer.md
+  - Workflows:
+      - Base Workflow: workflows/base-workflow.md
+      - New Project: workflows/new-project.md
+      - Feature: workflows/feature.md
+      - Bugfix: workflows/bugfix.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Agent Layer: architecture/agent-layer.md
+  - Examples:
+      - Web App: examples/web-app.md
+      - API Service: examples/api-service.md
+  - Project Management:
+      - Roadmap: project-management/roadmap.md
+      - Vision: project-management/vision.md
+  - Contributing:
+      - Readme: todo-use.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.magiclink
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - toc:
+      permalink: true
+      
