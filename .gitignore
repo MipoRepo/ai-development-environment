@@ -11,3 +11,9 @@ htmlcov/
 .env.local
 knowledge.db
 .claude/memories/*.db
+
+# Käännetyt tiedostot (testitulokset)
+*-en.md
+*-test-*.md
+README-test-en.md
+webdoc-test-en.md

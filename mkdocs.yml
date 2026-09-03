@@ -152,9 +152,6 @@ nav:
       - New Project: workflows/new-project.md
       - Feature: workflows/feature.md
       - Bugfix: workflows/bugfix.md
-  - Architecture:
-      - Overview: architecture/overview.md
-      - Agent Layer: architecture/agent-layer.md
   - Examples:
       - Web App: examples/web-app.md
       - API Service: examples/api-service.md
