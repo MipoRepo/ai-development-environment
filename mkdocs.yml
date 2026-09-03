@@ -19,7 +19,7 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-  logo: material/logo
+  logo: assets\images\aide-transparent.png
   features:
     - navigation.expand
     - navigation.indexes
@@ -45,6 +45,7 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
+      enable_git_follow: false
   - material/tags:
       tags_file: tags.md
   - minify:
@@ -77,12 +78,75 @@ nav:
       - Agent: concepts/agent.md
       - Workflow: concepts/workflow.md
   - Agents:
-      - Director: agents/director.md
-      - Project Manager: agents/project-manager.md
-      - Developer: agents/developer.md
-      - Tester: agents/tester.md
-      - Security: agents/security-architect.md
-      - Documentation: agents/technical-writer.md
+      - Overview: agents/overview.md
+      - Core:
+        - Director: agents/core/director.md
+        - Project Manager: agents/core/project-manager.md
+        - Researcher: agents/core/researcher.md
+      - Development:
+        - Developer: agents/development/developer.md
+        - Code Review: agents/development/code-review.md
+      - DevOps:
+        - CI/CD: agents/devops/ci_cd.md
+        - Docker: agents/devops/docker.md
+        - Deployment: agents/devops/deployment.md
+        - Infrastructure: agents/devops/infrastructure.md
+      - Testing:
+        - Test Designer: agents/testing/testing_agent.md
+        - Test Runner: agents/testing/testing_automation_agent.md
+      - Documentation:
+        - Documentation: agents/documentation/documentation.md
+      - Security:
+        - Security: agents/security/security.md
+      - AI Gateway:
+        - Gateway: agents/ai_gateway/gateway.md
+        - Router: agents/ai_gateway/router.md
+        - Token Tracker: agents/ai_gateway/token_tracker.md
+      - Local LLM:
+        - Model Runner: agents/local_llm/runner.md
+        - Quantization: agents/local_llm/quantization.md
+        - Local Model: agents/local_llm/local_model.md
+      - MCP & Integrations:
+        - MCP Integration: agents/mcp/mcp_integration.md
+        - API Integration: agents/mcp/api_integration.md
+        - Webhook: agents/mcp/webhook.md
+      - Knowledge:
+        - Knowledge Agent: agents/knowledge/knowledge_agent.md
+        - Memory Agent: agents/knowledge/memory_agent.md
+        - Context Compiler: agents/knowledge/context_compiler_agent.md
+      - Maintenance:
+        - Cleanup: agents/maintenance/cleanup_agent.md
+        - Dependency: agents/maintenance/dependency_agent.md
+        - Upgrade: agents/maintenance/upgrade_agent.md
+      - Release & Governance:
+        - Release Manager: agents/release/release_manager.md
+        - Changelog: agents/release/changelog_agent.md
+        - Compliance: agents/release/compliance_agent.md
+      - Agent Engineering:
+        - Agent Design: agents/agent_engineering/agent_design.md
+        - Agent Factory: agents/agent_engineering/agent_factory.md
+        - Prompt Optimizer: agents/agent_engineering/prompt_optimizer.md
+      - Orchestration:
+        - MultiAgent Coordinator: agents/orchestration/multiagent_coordinator.md
+        - Workflow Orchestrator: agents/orchestration/workflow_orchestrator.md
+      - Pedagogy:
+        - Mentor: agents/pedagogy/mentor.md
+        - Content Designer: agents/pedagogy/content_designer.md
+        - Explainer: agents/pedagogy/explainer.md
+        - Learning Path: agents/pedagogy/learning_path.md
+      - Learning & Assessment:
+        - Learning Path Agent: agents/learning/learning_path_agent.md
+        - Assessment: agents/learning/assessment_agent.md
+        - Feedback: agents/learning/feedback_agent.md
+      - Control Center:
+        - Control Center: agents/control_center/control_center.md
+        - CLI Orchestrator: agents/control_center/cli_orchestrator.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Agent Layer: architecture/agent-layer.md
+      - Dataflow: architecture/dataflow.md
+      - Modules: architecture/modules.md
+      - Agent Lifecycle: architecture/agent-lifecycle.md
   - Workflows:
       - Base Workflow: workflows/base-workflow.md
       - New Project: workflows/new-project.md
@@ -97,8 +161,9 @@ nav:
   - Project Management:
       - Roadmap: project-management/roadmap.md
       - Vision: project-management/vision.md
+      - TODO Alpha 2.3: project-management/todo/TODO-alpha2.3.md
   - Contributing:
-      - Readme: todo-use.md
+      - AIDE Developer Guide: todo-use.md
   - Tags: tags.md
 
 markdown_extensions:
@@ -118,4 +183,3 @@ markdown_extensions:
   - pymdownx.tilde
   - toc:
       permalink: true
-      

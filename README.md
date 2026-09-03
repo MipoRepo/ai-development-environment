@@ -66,7 +66,7 @@ Lue lisää [moduulisuunnitelmasta](.project-management/plans/MODULE_PLAN_UPDATE
 
 ---
 
-## 📚 Dokumentaatio
+## Dokumentaatio
 
 Kokosa dokumentaatio löytyy `.project-management/`-kansiosta tai [tämän sivun kautta](https://aide-env.github.io/ai-development-environment/).
 
@@ -74,10 +74,10 @@ Kokosa dokumentaatio löytyy `.project-management/`-kansiosta tai [tämän sivun
 
 ## Yhteydet
 
-- **Omistaja:** [Mikko Pohjola@2026](https://github.com/MipoRepo)
+- **Omistaja:** [Mikko Pohjola](https://github.com/MipoRepo)
 - **Avainsäsanat:** AI Development, Agent, DevOps, Documentation, Security
-- **Lisenssi:** [MIT](LICENSE) (suunnitellaan myöhemmin)
+- **Lisenssi:** [allrightreserved@MipoRepo](LICENSE) (kesken..)
 
 ---
 
-> **Projekti on kehityksessä.** Kiitos bukkereista ja ehdotuksista!
+> **Projekti on kehityksessä.** 

@@ -1,61 +1,54 @@
-# AI Development Environment (AIDE)
 
-**Agenttipohjainen ohjelmistokehitysympäristö, joka automatisoi rutiinit ja opettaa sinua samalla.**
+<div style="margin-bottom:2rem;width:100%;max-width:1600px">
+  <img src="assets/images/hero.jpg" alt="AI Development Environment - ympäristön yleiskuva" class="hero-image" style="width:100%;height:auto;border-radius:16px" />
+</div>
+
+# AI Development Environment - AIDE
+
+**AIDE** (AI Development Environment) on **agenttipohjainen ohjelmistokehitysympäristö**, joka yhdistää perinteisen ohjelmistotuotannon rakenteet moderniin tekoälyavustamiseen. Se ei ole yksittäinen agentti — se on kokonainen järjestelmä, jossa eri roolit yhteistoimivat. 
+
+## AIDA‑arkkitehtuuri - Kolme tasoa
+<br>
+
+<div style="margin-bottom:2rem;width:100%;max-width:1600px">
+  <img src="assets/images/kolmetasoa.jpg" alt="AI Development Environment - ympäristön yleiskuva" class="hero-image" style="width:100%;height:auto;border-radius:16px" />
+</div>
+
+### Agenttikerros – Älykäs osaaminen
+Tekoälyagentit muodostavat AIDA:n ylimmän tason. Ne analysoivat, suunnittelevat ja tuottavat sisältöä projektin tavoitteiden mukaisesti. Agentit ovat kontekstia ymmärtäviä ja oppivia, mutta niiden toiminta ei ole koskaan villiä — alemmat tasot pitävät ne kurissa.
+
+### Workflow‑kerros – Orkestraatio ja prosessit
+Tämä taso ohjaa koko ohjelmistokehityksen elinkaarta vaihe vaiheelta. Se varmistaa, että työ etenee järjestelmällisesti: **Analyze → Plan → Implement → Test → Review → Document**.
+
+Workflow toimii kuin projektin liikennevalo: seuraavaan vaiheeseen ei siirrytä ennen kuin laatuportit täyttyvät.
+
+### Deterministinen Engine – Luotettava perusta
+Arkkitehtuurin alin taso on AIDA:n turvaverkko. Se pakottaa kaiken agenttien tuottaman materiaalin sääntöjen, validointien, testien ja turvaskannausten läpi. Moottori takaa, että samasta syötteestä syntyy aina sama, turvallinen ja ennustettava lopputulos — ilman hallusinaatioita, hyppyjä prosessissa tai tietoturvariskejä.
+
+## AIDA vs. Perinteinen DevOps
+
+<div style="margin-bottom:2rem;width:100%;max-width:1600px">
+  <img src="assets/images/aida-devops.jpg" alt="AI Development Environment - ympäristön yleiskuva" class="hero-image" style="width:100%;height:auto;border-radius:16px" />
+</div>
 
 ---
+## Tältä sivustolta löydät
 
-## 🔗 AI Development Environment DOC's – Käyttöohjeistus
-
-Voit lukea tämän projektin täyden käyttöohjeistuksen ja dokumentaation osoitteessa:
-
-👉 **[https://miporepo.github.io/ai-development-environment-doc/](https://miporepo.github.io/ai-development-environment-doc/)**
-
-Tämä sivusto tarjoaa:
-- Asennus- ja käyttöohjeet projektin käynnistykseen.
-- Selitykset jokaiselle agentille ja workflowlle.
-- Esimerkeja toteutuksista ja oppimispoluista.
-- Tekniset speksit ja moduulikuvaukset.
-
----
-
-## Mikä tämä on?
-
-**AIDE** (AI Development Environment) on **agenttipohjainen ohjelmistokehitysympäristö**, joka yhdistää perinteisen ohjelmistotuotannon rakenteet moderniin tekoälyavustamiseen. Se ei ole yksittäinen agentti — se on kokonainen järjestelmä, jossa eri roolit (Director, Planner, Developer, Tester, Security, jne.) yhteistoimivat.
-
----
-
-## Miten se toimii?
-
-1. **Anna tehtävä:** Käytä komentoa `aide run "..."` tai `aide init`.
-2. **Director toimii:** Se tulkitsee tavoitteen ja valitsee oikean workflowin.
-3. **Agentit tekevät työn:** Analyysi → Suunnittelu → Toteutus → Testaus → Tarkistus → Dokumentointi.
-4. **Dokumentaatio päivittyy:** Kaikki muutokset dokumentoidaan automaattisesti.
-
----
-
-## Miten käytän sitä?
-
-### 1. Asennus
-```bash
-git clone https://github.com/aide-env/ai-development-environment.git
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-### 2. Käyttö
-```bash
-aide run "Lisää projektiin käyttäjätuki."
-```
+- Asennus- ja käyttöohjeet projektin käynnistykseen
+- Selitykset jokaiselle agentille ja workflowlle
+- Esimerkeja toteutuksista
+- Tekniset speksit ja moduulikuvaukset
 
 ---
 
 ## Haluatko oppia lisää?
+
 - [Asennus](getting-started/installation.md)
-- [Agentit](agents/director.md)
+- [Agentit](agents/overview.md)
 - [Workflowt](workflows/base-workflow.md)
 - [Arkkitehtuuri](architecture/overview.md)
 
+<img src="assets/images/logo-aide-vaalea-transparent.png" width="85px"> 
 ---
 
 > Tämä dokumentaatiosivusto päivittyy **automatisesti**, kun AIDE:n lähdekoodi muuttuu.
