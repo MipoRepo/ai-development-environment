@@ -19,7 +19,7 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-  logo: assets\images\aide-transparent.png
+  logo: assets/images/aide-transparent.png
   features:
     - navigation.expand
     - navigation.indexes
