@@ -1,5 +1,5 @@
 site_name: AI Development Environment (AIDE)
-repo_url: https://github.com/aide-env/ai-development-environment
+repo_url: https://github.com/MipoRepo/ai-development-environment
 repo_name: ai-development-environment
 docs_dir: docs
 site_dir: site
@@ -54,7 +54,7 @@ plugins:
 
 extra:
   version: 0.1.0
-  docs_url: https://aide-env.github.io/ai-development-environment/
+  docs_url: https://MipoRepo.github.io/ai-development-environment/
 
 extra_css:
   - stylesheets/extra.css
@@ -67,6 +67,7 @@ nav:
   - Getting Started:
       - Installation: getting-started/installation.md
       - First Project: getting-started/first-project.md
+      - Claude Code Use: getting-started/claude-code-use.md
   - User Guide:
       - Tasks: user-guide/tasks.md
       - Orchestration: user-guide/orchestration.md
@@ -98,6 +99,7 @@ nav:
       - Vision: project-management/vision.md
   - Contributing:
       - Readme: todo-use.md
+  - Tags: tags.md
 
 markdown_extensions:
   - admonition

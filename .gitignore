@@ -1,1 +1,13 @@
 .venv/
+site/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.env
+.env.local
+knowledge.db
+.claude/memories/*.db

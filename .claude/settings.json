@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pytest tests/test_research_agents.py -v)",
+      "Bash(python -c \"import ast; print\\('AST ok'\\)\")",
+      "Bash(python -c \"from agents.director import *; print\\('director ok'\\)\")",
+      "Bash(python -c \"from schemas.project import *; print\\('schemas ok'\\)\")",
+      "Bash(python -m pytest tests/test_developer_agent.py -v)",
+      "Bash(python -m pytest tests/test_developer_agent.py::TestCodeGeneration::test_run_generates_python -v)",
+      "Bash(python -m pytest tests/test_testing_agents.py -v)",
+      "Bash(python -m pytest tests/test_devops_agent.py -v --tb=short)",
+      "Bash(python -m pytest tests/test_pedagogy_agents.py -v --tb=short)",
+      "Bash(python -m pytest tests/test_pedagogy_agents.py::TestExplainerAgent::test_syntax_error_handling -v --tb=long)",
+      "Bash(python -m pytest tests/test_pedagogy_agents.py -v)",
+      "Bash(Move-Item \".project-management/todo/TODO-alpha1.3.md\" \".project-management/todo/old_todo/TODO-alpha1.3.md\")",
+      "Bash(python -m pytest tests/ -v)",
+      "Bash(python -m pytest tests/test_learning_path_agent.py tests/test_assessment_agent.py tests/test_feedback_agent.py -v)",
+      "Bash(python -c \"from agents.base import BaseAgent, AgentInput, AgentOutput; print\\('BaseAgent OK'\\)\")",
+      "Bash(python -c \"from agents.pedagogy_agent import LEARNING_TOPICS; print\\('Pedagogy imports OK'\\)\")",
+      "Bash(python -m pytest tests/test_knowledge_agent.py tests/test_memory_agent.py tests/test_context_compiler_agent.py -v)",
+      "Bash(python -m pytest tests/test_knowledge_agent.py::TestKnowledgeAgent::test_store_and_retrieve tests/test_knowledge_agent.py::TestKnowledgeAgent::test_retrieve_nonexistent -v)",
+      "Bash(python -c \"from agents.knowledge_agent import KnowledgeAgent; print\\('KnowledgeAgent OK'\\)\")",
+      "Bash(python -c \"from pyproject_parser import PyProject; print\\('pyproject-parser OK'\\)\")",
+      "Bash(python -c \"from agents import UpgradeAgent, CleanupAgent, DependencyAgent; print\\('M14 imports OK'\\)\")",
+      "Bash(python -m pytest tests/test_maintenance_agent.py -v)",
+      "Bash(python -m pytest tests/test_release_agent.py -v)",
+      "Bash(python -c \"from agents.agent_engineering_agent import AgentDesignAgent, PromptOptimizerAgent, AgentFactoryAgent; print\\('Import OK'\\)\")",
+      "Bash(python -c \"from agents.agent_engineering_agent import AgentDesignAgent, PromptOptimizerAgent, AgentFactoryAgent; a=AgentDesignAgent\\(\\); r=a.run\\('Test', agent_name='TestAgent', capabilities=['analyze']\\); print\\(r.success, r.message[:50]\\)\")",
+      "Bash(python -m pytest tests/test_agent_engineering_agent.py -v)"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+# Base workflow — Analyze → Plan → Implement → Test → Review → Document
+# Käytetään kun käyttäjän tehtävä ei kuulu muihin workflowiin (bugfix, feature, new-project).
+
+name: base
+description: >-
+  Yleinen kehitysworkflow. Kulkee jokaisen tavallisen projektin läpi:
+  analyysi → suunnittelu → toteutus → testaus → tarkistus → dokumentaatio.
+priority: normal
+max_steps: 10
+
+phases:
+  - name: analyze
+    description: "Analysoi projektin rakenteen, riippuvuudet ja ongelmat."
+    agent: researcher
+    tools: [read_files, list_files]
+
+  - name: plan
+    description: "Suunnittele toteutus ja jaa tehtävät."
+    agent: project_manager
+    tools: [generate_plan, breakdown_tasks]
+
+  - name: implement
+    description: "Toteuta koodi määräaikojen ja suunnitelman mukaan."
+    agent: developer
+    tools: [write_file, edit_file, generate_code]
+
+  - name: test
+    description: "Kirjoita ja suorita testit."
+    agent: tester
+    tools: [run_tests, generate_test]
+
+  - name: review
+    description: "Tarkista koodi ja turvallisuus."
+    agent: security_reviewer
+    tools: [code_review, security_scan]
+
+  - name: document
+    description: "Päivitä dokumentaatio."
+    agent: technical_writer
+    tools: [generate_docs, update_readme]
+
+on_complete:
+  message: "✅ Projektin peruskierros on valmis! Tulokset on tallennettu knowledge.dbään."

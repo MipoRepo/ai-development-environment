@@ -1,0 +1,42 @@
+# Feature workflow — Analyysi → Suunnittelu → Toteutus → Testaus → Tarkistus → Dokumentaatio
+
+name: feature
+description: >-
+  Käytetään uusien ominaisuuksien lisäämiseen. Sisältää turvallisuustarkistuksen
+  ja dokumentaation, jotka perustilanteessa jätetään väliin.
+priority: normal
+max_steps: 10
+
+phases:
+  - name: analyze
+    description: "Analysoi kyseinen ominaisuus ja sen vaikutus projektiin."
+    agent: researcher
+    tools: [read_files, list_files]
+
+  - name: plan
+    description: "Suunnittele feature-arkkitehtuuri ja API."
+    agent: project_manager
+    tools: [generate_plan, breakdown_tasks]
+
+  - name: implement
+    description: "Toteuta feature uusilla tiedostoilla ja muutoksilla."
+    agent: developer
+    tools: [write_file, edit_file, generate_code]
+
+  - name: test
+    description: "Kirjoita testit uuden featuren funktionaalisuudelle."
+    agent: tester
+    tools: [run_tests, generate_test]
+
+  - name: review
+    description: "Tarkista koodi ja turvallisuus uusissa tiedostoissa."
+    agent: security_reviewer
+    tools: [code_review, security_scan]
+
+  - name: document
+    description: "Päivitä dokumentaatio uuden featuren osalta."
+    agent: technical_writer
+    tools: [generate_docs, update_readme]
+
+on_complete:
+  message: "[VALMIS] Feature toteutettu. Dokumentaatio on päivitetty."

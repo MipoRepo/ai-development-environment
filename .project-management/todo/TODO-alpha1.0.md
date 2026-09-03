@@ -46,31 +46,52 @@ Kun nämä muistit ovat käytössä, **tämä projekti tulee muistamaan kaikki p
 ---
 
 ## Tehtävä 1: Grundiviiviot ja projektirakenne ✅
-- ✅ Luo projektin perusrakenne (`agents/`, `workflows/`, `tools/`, `schemas/`, `tests/`).
-- ✅ Aseta Python-venv ja asenna `requirements.txt`.
+- ✅ Luo projektin perusrakenne (`agents/`, `workflows/`, `tools/`, `schemas/`, `tests/`, `src/`).
+- ✅ Aseta Python-venv ja asenna `requirements.txt` (`.venv/` luotu).
 - ✅ Määritä `.gitignore` (lisätty: `.env`, `.venv/`, `__pycache__/`, `site/`, `knowledge.db`).
-- ✅ Luo ja varmista `.claude/memories/`-kansio käytön sääntöjen säilyttämiseksi (katso yllä).
+- ✅ Luo ja varmista `.claude/memories/project-rules.md` sääntöjen säilyttämiseksi.
 
-## Tehtävä 2: OpenRouter-integraatio
-- [ ] Totea `AIProvider`-luokka OpenRouterille (`tools/ai_provider.py`).
-- [ ] Lisää pääsy AVAIN `.env`-tiedostoon.
-- [ ] Kirjoita yksikkötesti yhteyden testaamiseen (`tests/test_ai_provider.py`).
+## Tehtävä 2: OpenRouter-integraatio ✅
+- ✅ Totea `AIProvider`-luokka OpenRouterille (`tools/ai_provider.py`).
+- ✅ Luo `.env.example`-tiedosto (kopioi `.env`-tiedoksi).
+- ✅ Kirjoita yksikkötesti yhteyden testaamiseen (`tests/test_ai_provider.py`).
 
 ## Tehtävä 3: Agenttien ydin ✅
-- ✅ Määritä `Agent`-perusluokka Pydanticillä (`agents/base.py`).
-- ✅ Totea `BaseAgent`-interface (input_schema, run(), output_schema).
-- [ ] Kirjoita testit `BaseAgent`-luokalle (`tests/test_base_agent.py`).
+- ✅ Määritä `BaseAgent`-perusluokka Pydanticillä (`agents/base.py`).
+- ✅ Totea `AgentInput` ja `AgentOutput`-mallit (input_schema, run(), output_schema).
+- ✅ Kirjoita testit `BaseAgent`-luokalle (`tests/test_base_agent.py`).
 
 ## Tehtävä 4: Director-agentti ✅
 - ✅ Totea `DirectorAgent`-luokka (`agents/director.py`).
-- ✅ Määritä sen kyky tulkita käyttäjätehtävät YAML/JSON-muodossa.
-- [ ] Kirjoita testi, jolla Director valitsee oikean workflowin (`tests/test_director.py`).
+- ✅ Tulkitsee käyttäjätehtävät YAML/JSON-muodossa (task-kohtaiset workflowt).
+- ✅ Valitsee oikean workflowin (bugfix / feature / base).
+- ✅ Kirjoita testi, jolla Director valitsee oikean workflowin (`tests/test_director.py`).
 
 ## Tehtävä 5: Workflowjen tilakone ✅
-- ✅ Määritä `Workflow`-luokka YAML-konfiguraatiolle (`workflows/engine.py`).
-- ✅ Totea tilan siirtyminen (`Analyze → Plan → Implement → Test → Review → Document`).
-- [ ] Kirjoaa testi, joka toimii läpi koko workflowin (`tests/test_workflow_engine.py`).
-- [ ] Luo `base.yaml` workflow-tiedosto (`workflows/base.yaml`).
+- ✅ Totea `WorkflowEngine`-luokka YAML-konfiguraatiolle (`workflows/engine.py`).
+- ✅ Totea tilan siirtyminen (`INIT → ANALYZE → PLAN → IMPLEMENT → TEST → REVIEW → DOCUMENT → COMPLETE`).
+- ✅ Kirjoaa testi, joka toimii läpi koko workflowin (`tests/test_workflow_engine.py`).
+- ✅ Luo `base.yaml` workflow-tiedosto (`workflows/base.yaml`).
+- ✅ Lisätty `bugfix.yaml` ja `feature.yaml` workflowt.
+
+## Tehtävä 6: CLI-komento ✅
+- ✅ Totea `cli.py` CLI-komennolla (Typer).
+- ✅ `aide init` — luo uuden projektin (`PROJECT.md`, `AGENTS.md`, `planning/`, `src/`).
+- ✅ `aide run` — aja tehtävä koko workflow-ketjun läpi.
+- ✅ `aide status` — näytä projektin tila.
+
+**M1 valmis kun (Käynnistys valmis):** ✅
+CLI-komento `aide run "testi projektin luominen"` toimii ja tuottaa tulosteen jokaisesta workflow-vaiheesta. Testikattavuus >90 %.
+
+**CLI-käynnistys Promptti:**
+```bash
+# Luo .venv ja asenna riippuvuudet:
+python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+# Aja CLI:
+python cli.py run "Analysoi tämä projekti ja ehdota uusi feature."
+# Tai aloita uusi projekti:
+python cli.py init --name TestiProjekti
+```
 
 ---
 

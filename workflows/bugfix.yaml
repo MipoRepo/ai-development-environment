@@ -1,0 +1,32 @@
+# Bugfix workflow — Analyysi → Suunnittelu → Toteutus → Testaus
+
+name: bugfix
+description: >-
+  Käytetään olemassa olevan koodin korjaukseen. Pysäytetään dokumentaatio- ja
+  tarkistusvaihe, jotta korjaus voidaan toistaa nopeasti.
+priority: high
+max_steps: 6
+
+phases:
+  - name: analyze
+    description: "Paikaile ongelma ja analysoi juurisyy."
+    agent: researcher
+    tools: [read_files, list_files]
+
+  - name: plan
+    description: "Suunnittele korjaus ja vaatimukset."
+    agent: project_manager
+    tools: [generate_plan, breakdown_tasks]
+
+  - name: implement
+    description: "Toteuta korjaus koodiin."
+    agent: developer
+    tools: [edit_file, generate_code]
+
+  - name: test
+    description: "Varmista että korjaus toimii ja ettei riko muuta toiminnallisuutta."
+    agent: tester
+    tools: [run_tests, generate_test]
+
+on_complete:
+  message: "[VALMIS] Bugfix käsitelty. Testaa kaikki liittyvät komponentit."

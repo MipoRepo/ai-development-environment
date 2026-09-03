@@ -93,6 +93,6 @@ Kun projekti on valmis, se tuottaa:
 
 | Kenti | Tieto |
 | --- | --- |
-| **Omistaja** | Miko |
+| **Omistaja** | Mikko Pohjola, @MipoRepo, 2026|
 | **Tiimi** | Yksittäinen projekti (Claude Code + käyttäjä) |
 | **Yhteystapa** | Projekti- ja suunnitelmapohjaiset tiedot `.project-management/`-kansiosta. |
