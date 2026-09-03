@@ -1,12 +1,12 @@
-# AI Development Environment (AIDE) 🚀
+# AI Development Environment (AIDE) 
 
 **Agenttipohjainen ohjelmistokehitysympäristö, joka automatisoi rutiinit ja opettaa sinua samalla.**
 
-> ⚠️ **HUOM:** Tämä on **kehittelyssä oleva alusta**. Dokumentaatio ja koodi päivittyvät jatkuvasti. Katso [dokumentaatiosivusto](https://aide-env.github.io/ai-development-environment/) saadaksesi täyden kaavan.
+> **HUOM:** Tämä on **kehittelyssä oleva alusta**. Dokumentaatio ja koodi päivittyvät jatkuvasti. Katso [dokumentaatiosivusto](https://aide-env.github.io/ai-development-environment/) saadaksesi täyden kaavan.
 
 ---
 
-## ❓ Mitä tämä on?
+## Mitä tämä on?
 
 AIDE ei ole yksittäinen agentti. Se on **kokonainen kehitysjärjestelmä**, joka:
 
@@ -21,7 +21,7 @@ Se toimii **Claude Code** + **MCP-integraation** kautta.
 
 ---
 
-## 🚀 Miten käytän sitä?
+## Miten käytän sitä?
 
 ### 1. Asennus (tulevat vaiheet)
 ```bash
@@ -52,7 +52,7 @@ mkdocs serve
 
 ---
 
-## 🏗️ Projektin rakenne
+## Projektin rakenne
 
 Projekti on jaettu **20 moduuliin**, jotka on järjestetty kehityksen edistymisen mukaan:
 
@@ -72,9 +72,9 @@ Kokosa dokumentaatio löytyy `.project-management/`-kansiosta tai [tämän sivun
 
 ---
 
-## 🙋‍♂️ Yhteydet
+## Yhteydet
 
-- **Omistaja:** [Miko](https://github.com/MipoRepo)
+- **Omistaja:** [Mikko Pohjola@2026](https://github.com/MipoRepo)
 - **Avainsäsanat:** AI Development, Agent, DevOps, Documentation, Security
 - **Lisenssi:** [MIT](LICENSE) (suunnitellaan myöhemmin)
 
