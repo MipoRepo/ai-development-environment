@@ -19,6 +19,7 @@ mkdocs>=1.5,<1.6
 mkdocs-material>=9.5.0
 mkdocs-mermaid2-plugin>=1.2.0
 mkdocs-git-revision-date-localized-plugin>=1.2.0
+mkdocs-minify-plugin>=0.8.0
 
 # Git integration
 ghp-import>=1.0.0

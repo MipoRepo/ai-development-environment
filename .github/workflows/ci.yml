@@ -24,7 +24,7 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest pytest-cov mkdocs
-          pip install "mkdocs>=1.5,<1.6" "mkdocs-material" "mkdocs-mermaid2-plugin"
+          pip install "mkdocs>=1.5,<1.6" "mkdocs-material" "mkdocs-mermaid2-plugin" "mkdocs-minify-plugin"
 
       - name: Run unit tests
         run: |
