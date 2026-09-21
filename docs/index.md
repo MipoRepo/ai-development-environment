@@ -13,7 +13,6 @@ Tämä projekti toimii henkilökohtaisena opiskelu- ja tutkimusympäristönä.
 
 ## AIDA vs. Perinteinen DevOps
 
-<img src="assets/images/logo-aide-vaalea-transparent.png" width="65px"> 
 <div style="margin-bottom:2rem;width:100%;max-width:1600px">
   <img src="assets/images/aida-devops.jpg" alt="AI Development Environment - ympäristön yleiskuva" class="hero-image" style="width:100%;height:auto;border-radius:16px" />
 </div>
@@ -35,6 +34,8 @@ Workflow toimii kuin projektin liikennevalo: seuraavaan vaiheeseen ei siirrytä 
 
 ### Deterministinen Engine – Luotettava perusta
 Arkkitehtuurin alin taso on AIDA:n turvaverkko. Se pakottaa kaiken agenttien tuottaman materiaalin sääntöjen, validointien, testien ja turvaskannausten läpi. Moottori takaa, että samasta syötteestä syntyy aina sama, turvallinen ja ennustettava lopputulos — ilman hallusinaatioita, hyppyjä prosessissa tai tietoturvariskejä.
+
+---
 
 ## Opiskelun ja tutkimuksen neljä kohdetta
 
