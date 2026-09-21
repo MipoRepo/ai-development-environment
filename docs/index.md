@@ -100,12 +100,14 @@ Kerros hallinnoi käyttäjän syötteitä (kehotteet, koodipohjat) ja järjestel
 - Kehitysympäristön tilannekuvan taltiointi ja rekonstruointi  
 - Jäljitettävyyden ja läpinäkyvyyden varmistaminen
 
-## AIDA vs. Perinteinen DevOps
+---
 
+## AIDA vs. Perinteinen DevOps
+<img src="assets/images/logo-aide-vaalea-transparent.png" width="45px"> 
 <div style="margin-bottom:2rem;width:100%;max-width:1600px">
   <img src="assets/images/aida-devops.jpg" alt="AI Development Environment - ympäristön yleiskuva" class="hero-image" style="width:100%;height:auto;border-radius:16px" />
 </div>
 
 ---
 
-<img src="assets/images/logo-aide-vaalea-transparent.png" width="45px"> 
+
