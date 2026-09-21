@@ -37,10 +37,12 @@ AIDE toimii käytännön laboratoriona, jossa tutkin neljää keskeistä osa‑a
 Kerros vastaa tehtävien analysoinnista, koodin generoinnista ja ratkaisujen validoinnista roolitettujen agenttien kautta.
 
 **Kokeilut**
+
 - **AST & Konteksti:** Vertailen eri tapoja syöttää koodikannan kontekstia agentille. Tutkin, saavutetaanko parempia tuloksia raakakoodilla vai muodostamalla koodista syntaksipuita (AST), jotka tiivistävät agentille vain olennaiset funktiorajapinnat ja tyypitykset.
 - **Semanttinen haku:** Testaan RAG‑arkkitehtuureja, jotka hakevat koodista semanttisesti relevantteja osia ja tarjoavat agentille täsmällisemmän kontekstin.
 
 **Osaamistavoitteet**
+
 - Abstract Syntax Tree (AST) -parserointi Tree-sitter-työkalulla  
 - Koodikantojen semanttinen haku  
 - RAG-arkkitehtuurien hyödyntäminen agenttien kontekstin parantamisessa
@@ -51,11 +53,13 @@ Kerros vastaa tehtävien analysoinnista, koodin generoinnista ja ratkaisujen val
 Tämä kerros valvoo agentin toimintaa ja varmistaa koodin laadun automaattisilla testeillä ja staattisella analyysilla.
 
 **Kokeilut**
+
 - **Self-Healing Loop:** Syötän agentille tahallaan virheellistä koodia.  
   AIDE ajaa testit (pytest / npm test), kerää virhelokit ja pakottaa agentin automaattiseen korjaussilmukkaan, kunnes koodi läpäisee testit (Exit Code 0).
 - **Staattinen analyysi:** Testaan linttereitä, tyyppitarkistimia ja analysoin, miten agentti reagoi eri virheluokkiin.
 
 **Osaamistavoitteet**
+
 - Automaattiset palautekytkennät  
 - Virhelokien reaaliaikainen parserointi  
 - LLM-promptien dynaaminen optimointi lennosta  
@@ -67,10 +71,12 @@ Tämä kerros valvoo agentin toimintaa ja varmistaa koodin laadun automaattisill
 Agentin tuottamaa koodia ei koskaan ajeta suoraan isäntäjärjestelmässä, vaan aina täysin eristetyssä ajoympäristössä.
 
 **Kokeilut**
+
 - **Sandbox Lab:** Tutkin eri koodausagenttien (Claude Code, AutoGPT, Devika) käyttäytymistä, kun suoritusympäristö lukitaan täysin eristettyyn Docker- tai MicroVM-konttiin ilman ulkoista verkoyhteyttä (network_mode="none").
 - **Resurssirajoitukset:** Testaan CPU-, muisti- ja I/O-rajoituksia ja tarkkailen, miten agentin tuottama koodi käyttäytyy niissä.
 
 **Osaamistavoitteet**
+
 - Konttiorkestrointi Docker/Podman SDK:lla  
 - Prosessien eristys ja turvallinen suorituskonteksti  
 - Resurssirajoitusten hallinta  
@@ -82,11 +88,13 @@ Agentin tuottamaa koodia ei koskaan ajeta suoraan isäntäjärjestelmässä, vaa
 Kerros hallinnoi käyttäjän syötteitä (kehotteet, koodipohjat) ja järjestelmän tuottamia tuloksia (koodimuutokset, testiraportit, lokitiedostot).
 
 **Kokeilut**
+
 - **Audit Trail:** Rakennan lokitusjärjestelmän, joka tallentaa jokaisen agentin toiminnon ja koodimuutoksen.
 - **JSON-rajapinnat:** Testaan jäsenneltyjä rajapintoja, joilla agentit kommunikoivat workflow-kerroksen kanssa.
 - **Tilannekuvan taltiointi:** Tutkin, miten koko kehitysympäristön tila voidaan tallentaa ja palauttaa.
 
 **Osaamistavoitteet**
+
 - Tapahtumalokituksen (audit trail) rakenne  
 - Jäsennellyt JSON-rajapinnat  
 - Kehitysympäristön tilannekuvan taltiointi ja rekonstruointi  

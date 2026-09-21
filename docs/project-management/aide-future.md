@@ -29,7 +29,7 @@ Jotta autonomisia koodausagentteja voidaan tehokkaasti eristää, ohjata ja vali
 
 ### 1. Eristetty ja dynaaminen suoritusympäristö (Sandboxing)
 
-Agenttien ei voida antaa ajaa koodia suoraan isäntäpalvelimella tai kehittäjän omalla käyttöjärjestelmällä. AIDE orkestroi dynaamisia, turvallisia ja resurssirajoitettuja hiekkalaatikoita, jotka käynnistyvät sekunneissa.
+Agenttien ei voida antaa ajaa koodia suoraan isäntäpalvelimella tai kehittäjän omalla käyttöjärjestelmällä. AIDE orkestroi dynaamisia, turvallisia ja resurssirajoitettuja hiekkalaatikoita.
 
 *   **Teknologiat:** Docker, Podman tai MicroVM-teknologiat (kuten Firecracker).
 *   **Toteutus:** AIDE käyttää rajapintoja pystyttääkseen puhtaan, eristetyn kontin aina, kun agentti aloittaa tehtävän. Konttiin on esiasennettu tarvittavat SDK-työkalut, mutta se on eristetty ulkoisesta verkosta (`network_mode="none"`). Tämä estää datan vuotamisen tai haitallisten skriptien lataamisen.
