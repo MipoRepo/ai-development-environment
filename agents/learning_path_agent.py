@@ -735,7 +735,7 @@ class FeedbackAgent(BaseAgent):
         for area in focus_areas:
             if area == "readability" and not any("luku" in s.lower() for s in suggestions):
                 suggestions.append("Lisää kommentteja parantaaksesi lukukelpoisuutta.")
-            elif area == "efficiency" and not any("tehokkuus" in s.lower() in s for s in suggestions if "tehokkuus" in s.lower()):
+            elif area == "efficiency" and not any("tehokkuus" in s.lower() for s in suggestions):
                 suggestions.append("Harkitse algoritmin optimointia suorituskyvyn parantamiseksi.")
             elif area == "security" and not any("turva" in s.lower() for s in suggestions):
                 suggestions.append("Tarkista syötevahvistus ja mahdolliset turvallisuusongelmat.")

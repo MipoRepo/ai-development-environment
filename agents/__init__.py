@@ -70,6 +70,9 @@ from .devops_agent import (
     DeploymentAgent,
     DeploymentAgentInput,
     DeploymentAgentOutput,
+    COMPOSE_TEMPLATES,
+    GITHUB_WORKFLOW_TEMPLATES,
+    DEPLOYMENT_TEMPLATES,
 )
 from .pedagogy_agent import (
     MentorAgent,
@@ -243,20 +246,6 @@ from .control_center_agent import (
     ALERT_LEVELS,
     CLI_HELP_TEXT,
 )
-from .devops_agent import COMPOSE_TEMPLATES, GITHUB_WORKFLOW_TEMPLATES, DEPLOYMENT_TEMPLATES  # noqa: E402
-from .learning_path_agent import (  # noqa: E402
-    LearningPathAgent,
-    LearningPathAgentInput,
-    LearningPathAgentOutput,
-    AssessmentAgent,
-    AssessmentInput,
-    AssessmentOutput,
-    FeedbackAgent,
-    FeedbackInput,
-    FeedbackOutput,
-    PATH_STRATEGIES,
-    ASSESSMENT_CRITERIA,
-)
 
 __all__ = [
     "DockerAgent",
@@ -286,6 +275,15 @@ __all__ = [
     "COMPOSE_TEMPLATES",
     "GITHUB_WORKFLOW_TEMPLATES",
     "DEPLOYMENT_TEMPLATES",
+    "MonitoringAgent",
+    "MonitoringInput",
+    "MonitoringOutput",
+    "LoggingAgent",
+    "LoggingInput",
+    "LoggingOutput",
+    "MetricsAgent",
+    "MetricsInput",
+    "MetricsOutput",
     "LearningPathAgent",
     "LearningPathAgentInput",
     "LearningPathAgentOutput",

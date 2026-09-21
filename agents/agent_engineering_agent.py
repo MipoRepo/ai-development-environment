@@ -727,7 +727,7 @@ class {name}(BaseAgent):
     """{description}"""
 
     agent_type: str = "{agent_type}"
-    input_schema = {name}Output
+    input_schema = {name}Input
     output_schema = {name}Output
 
     def _run(self, input_data: {name}Input) -> {name}Output:

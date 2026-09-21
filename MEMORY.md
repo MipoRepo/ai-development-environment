@@ -1,11 +1,16 @@
 # AIDE-projektimuisti
 
+## Dokumentaatio
+
+- [Agenttien Tilanne](AGENTTIS_ELTITYS.md) — Täydellinen AIDE-arkkitehtuurin yhteenveto kaikista 20 moduulista (M1–M20), kaikista agenteista, vakioista ja käännetyistä virheistä
+
 ## Projektisäännöt
 - [Project Rules](.claude/memories/project-rules.md) — AIDE-projektin yleiset säännöt ja päätökset
 
 ## Moduulimuistit
 
 - [M13 Knowledge & Memory](.claude/memories/knowledge-memory-m13.md)
+- [M14 Maintenance](.claude/memories/maintenance-m14.md)
 - [M15 Release & Governance](.claude/memories/release-agents-m15.md)
 - [M16 Agent Engineering](.claude/memories/agent-engineering-m16.md)
 - [M17 AI Gateway](.claude/memories/ai-gateway-m17.md)

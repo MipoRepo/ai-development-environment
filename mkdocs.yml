@@ -156,8 +156,9 @@ nav:
       - Web App: examples/web-app.md
       - API Service: examples/api-service.md
   - Project Management:
-      - Roadmap: project-management/roadmap.md
       - Vision: project-management/vision.md
+      - Aide Future: project-management/aide-future.md 
+      - Roadmap: project-management/roadmap.md
       - TODO Alpha 2.3: project-management/todo/TODO-alpha2.3.md
   - Contributing:
       - AIDE Developer Guide: todo-use.md

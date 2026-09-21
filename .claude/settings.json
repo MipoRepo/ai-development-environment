@@ -13,7 +13,7 @@
       "Bash(python -m pytest tests/test_pedagogy_agents.py::TestExplainerAgent::test_syntax_error_handling -v --tb=long)",
       "Bash(python -m pytest tests/test_pedagogy_agents.py -v)",
       "Bash(Move-Item \".project-management/todo/TODO-alpha1.3.md\" \".project-management/todo/old_todo/TODO-alpha1.3.md\")",
-      "Bash(python -m pytest tests/ -v)",
+      "Bash(python -m pytest tests/test_knowledge_agent.py tests/test_memory_agent.py tests/test_context_compiler_agent.py tests/test_maintenance_agent.py -v)",
       "Bash(python -m pytest tests/test_learning_path_agent.py tests/test_assessment_agent.py tests/test_feedback_agent.py -v)",
       "Bash(python -c \"from agents.base import BaseAgent, AgentInput, AgentOutput; print\\('BaseAgent OK'\\)\")",
       "Bash(python -c \"from agents.pedagogy_agent import LEARNING_TOPICS; print\\('Pedagogy imports OK'\\)\")",
