@@ -13,7 +13,7 @@ Sen sijaan, että luotettaisiin tekoälyn tuottavan aina virheetöntä koodia, A
 
 ### AIDE ei ole valmis – enkä ole minäkään.
 
-AIDE kasvaa sitä mukaa kuin minä opin ymmärtämään paremmin agenttipohjaista ohjelmistokehitystä, tekoälyä ja niiden ympärille rakennettavia järjestelmiä. Projektin tarkoitus ei ole osoittaa, että kaikki on jo valmista, vaan tehdä näkyväksi se, mitä tutkin, rakennan, kokeilen ja opin matkan varrella.
+AIDE kasvaa sitä mukaa kuin minä opin ymmärtämään paremmin agenttipohjaista ohjelmistokehitystä, tekoälyä ja niiden ympärille rakennettavia järjestelmiä. Projektin tarkoitus ei ole osoittaa, että kaikki on jo valmista, vaan tehdä näkyväksi se, mitä tutkin, rakennan, kokeilen ja opin.
 
 ## AIDE vs. Perinteinen DevOps
 
@@ -30,7 +30,7 @@ AIDE kasvaa sitä mukaa kuin minä opin ymmärtämään paremmin agenttipohjaist
 </div>
 
 ### Agenttikerros – Älykäs osaaminen
-Tekoälyagentit muodostavat AIDA:n ylimmän tason. Ne analysoivat, suunnittelevat ja tuottavat sisältöä projektin tavoitteiden mukaisesti. Agentit ovat kontekstia ymmärtäviä ja oppivia, mutta niiden toiminta ei ole koskaan villiä — alemmat tasot pitävät ne kurissa.
+Tekoälyagentit muodostavat AIDE:n ylimmän tason. Ne analysoivat, suunnittelevat ja tuottavat sisältöä projektin tavoitteiden mukaisesti. Agentit ovat kontekstia ymmärtäviä ja oppivia, mutta niiden toiminta ei ole koskaan villiä — alemmat tasot pitävät ne kurissa.
 
 ### Workflow‑kerros – Orkestraatio ja prosessit
 Tämä taso ohjaa koko ohjelmistokehityksen elinkaarta vaihe vaiheelta. Se varmistaa, että työ etenee järjestelmällisesti: **Analyze → Plan → Implement → Test → Review → Document**.
@@ -38,7 +38,7 @@ Tämä taso ohjaa koko ohjelmistokehityksen elinkaarta vaihe vaiheelta. Se varmi
 Workflow toimii kuin projektin liikennevalo: seuraavaan vaiheeseen ei siirrytä ennen kuin laatuportit täyttyvät.
 
 ### Deterministinen Engine – Luotettava perusta
-Arkkitehtuurin alin taso on AIDA:n turvaverkko. Se pakottaa kaiken agenttien tuottaman materiaalin sääntöjen, validointien, testien ja turvaskannausten läpi. Moottori takaa, että samasta syötteestä syntyy aina sama, turvallinen ja ennustettava lopputulos — ilman hallusinaatioita, hyppyjä prosessissa tai tietoturvariskejä.
+Arkkitehtuurin alin taso on AIDE:n turvaverkko. Se pakottaa kaiken agenttien tuottaman materiaalin sääntöjen, validointien, testien ja turvaskannausten läpi. Moottori takaa, että samasta syötteestä syntyy aina sama, turvallinen ja ennustettava lopputulos — ilman hallusinaatioita, hyppyjä prosessissa tai tietoturvariskejä.
 
 ---
 
@@ -97,6 +97,7 @@ Agentin tuottamaa koodia ei koskaan ajeta suoraan isäntäjärjestelmässä, vaa
 ---
 
 ### 4. Syöte- ja tuloskerros (Rajapinnat & Lokitus)
+
 Kerros hallinnoi käyttäjän syötteitä (kehotteet, koodipohjat) ja järjestelmän tuottamia tuloksia (koodimuutokset, testiraportit, lokitiedostot).
 
 **Kokeilut**
