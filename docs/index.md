@@ -11,13 +11,13 @@ Sen sijaan, että luotettaisiin tekoälyn tuottavan aina virheetöntä koodia, A
 
 Tämä projekti toimii henkilökohtaisena opiskelu- ja tutkimusympäristönä.
 
-## AIDA vs. Perinteinen DevOps
+## AIDE vs. Perinteinen DevOps
 
 <div style="margin-bottom:2rem;width:100%;max-width:1600px">
   <img src="assets/images/aida-devops.jpg" alt="AI Development Environment - ympäristön yleiskuva" class="hero-image" style="width:100%;height:auto;border-radius:16px" />
 </div>
 
-## AIDA‑arkkitehtuuri - Kolme tasoa
+## AIDE‑arkkitehtuuri - Kolme tasoa
 <br>
 
 <div style="margin-bottom:2rem;width:100%;max-width:1600px">
@@ -70,7 +70,7 @@ Tämä kerros valvoo agentin toimintaa ja varmistaa koodin laadun automaattisill
 
 - Automaattiset palautekytkennät  
 - Virhelokien reaaliaikainen parserointi  
-- LLM-promptien dynaaminen optimointi lennosta  
+- LLM-promptien dynaaminen optimointi  
 - Testiautomaatio ja regressioiden tunnistus
 
 ---
@@ -80,8 +80,7 @@ Agentin tuottamaa koodia ei koskaan ajeta suoraan isäntäjärjestelmässä, vaa
 
 **Kokeilut**
 
-- **Sandbox Lab:** Tutkin eri koodausagenttien (Claude Code, AutoGPT, Devika) käyttäytymistä, kun suoritusympäristö lukitaan täysin eristettyyn Docker- tai MicroVM-konttiin ilman ulkoista verkoyhteyttä (network_mode="none").
-- **Resurssirajoitukset:** Testaan CPU-, muisti- ja I/O-rajoituksia ja tarkkailen, miten agentin tuottama koodi käyttäytyy niissä.
+- **Sandbox Lab:** Tutkin eri koodausagenttien käyttäytymistä, kun suoritusympäristö lukitaan täysin eristettyyn Docker- tai MicroVM-konttiin ilman ulkoista verkoyhteyttä (network_mode="none").
 
 **Osaamistavoitteet**
 
