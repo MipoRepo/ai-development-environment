@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # <--- LISÄTTY TÄMÄ RIVI
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -21,7 +23,7 @@ jobs:
           python -m venv .venv
           source .venv/bin/activate
           pip install --upgrade pip
-          pip install "mkdocs>=1.5,<1.6" mkdocs-material mkdocs-mermaid2-plugin mkdocs-minify-plugin
+          pip install "mkdocs>=1.5,<1.6" mkdocs-material mkdocs-mermaid2-plugin mkdocs-minify-plugin mkdocs-git-revision-date-localized-plugin
           mkdocs build
 
       - name: Deploy to GitHub Pages

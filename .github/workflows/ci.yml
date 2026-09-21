@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # <--- LISÄTTY TÄMÄ RIVI
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -24,7 +26,7 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest pytest-cov mkdocs
-          pip install "mkdocs>=1.5,<1.6" "mkdocs-material" "mkdocs-mermaid2-plugin" "mkdocs-minify-plugin"
+          pip install "mkdocs>=1.5,<1.6" "mkdocs-material" "mkdocs-mermaid2-plugin" "mkdocs-minify-plugin" "mkdocs-git-revision-date-localized-plugin"
 
       - name: Run unit tests
         run: |
