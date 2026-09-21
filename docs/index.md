@@ -9,13 +9,18 @@
 
 Sen sijaan, että luotettaisiin tekoälyn tuottavan aina virheetöntä koodia, AIDE toimii valvojana: se ajaa agentin tekemät muutokset eristetyssä ympäristössä, suorittaa automaattiset testit ja syöttää havaitut virheet takaisin agentille korjattavaksi – kunnes koodi toimii varmistetusti.
 
-Tämä projekti toimii henkilökohtaisena opiskelu- ja tutkimusympäristönä.
+**Tämä projekti toimii henkilökohtaisena opiskelu- ja tutkimusympäristönä.**
+
+### AIDE ei ole valmis – enkä ole minäkään.
+
+AIDE kasvaa sitä mukaa kuin minä opin ymmärtämään paremmin agenttipohjaista ohjelmistokehitystä, tekoälyä ja niiden ympärille rakennettavia järjestelmiä. Projektin tarkoitus ei ole osoittaa, että kaikki on jo valmista, vaan tehdä näkyväksi se, mitä tutkin, rakennan, kokeilen ja opin matkan varrella.
 
 ## AIDE vs. Perinteinen DevOps
 
 <div style="margin-bottom:2rem;width:100%;max-width:1600px">
   <img src="assets/images/aida-devops.jpg" alt="AI Development Environment - ympäristön yleiskuva" class="hero-image" style="width:100%;height:auto;border-radius:16px" />
 </div>
+*Hups. kuvassa pieni kirjoitusvirhe "AIDA".*
 
 ## AIDE‑arkkitehtuuri - Kolme tasoa
 <br>
