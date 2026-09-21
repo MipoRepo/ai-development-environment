@@ -7,7 +7,7 @@
 
 **AIDE** (AI Development Environment) on **agenttipohjainen ohjelmistokehitysympäristö**, joka yhdistää perinteisen ohjelmistotuotannon rakenteet moderniin tekoälyavustamiseen. Se ei ole yksittäinen agentti — se on kokonainen järjestelmä, jossa eri roolit yhteistoimivat. 
 
-Sen sijaan, että luotettaisiin tekoälyn tuottavan aina virheetöntä koodia, AIDE toimii valvojana: se ajaa agentin tekemät muutokset eristetyssä ympäristössä, suorittaa automaattiset testit ja syöttää havaitut virheet takaisin agentille korjattavaksi – kunnes koodi toimii varmistetusti.
+Sen sijaan, että luotettaisiin tekoälyn tuottavan aina virheetöntä koodia, AIDE toimii valvojana: se ajaa agentin tekemät muutokset eristetyssä ympäristössä, suorittaa automaattiset testit ja syöttää havaitut virheet takaisin agentille korjattavaksi – kunnes lopputulos täyttää määritellyt testaus- ja validointivaatimukset.
 
 **Tämä projekti toimii henkilökohtaisena opiskelu- ja tutkimusympäristönä.**
 
@@ -20,7 +20,7 @@ AIDE kasvaa sitä mukaa kuin minä opin ymmärtämään paremmin agenttipohjaist
 <div style="margin-bottom:2rem;width:100%;max-width:1600px">
   <img src="assets/images/aida-devops.jpg" alt="AI Development Environment - ympäristön yleiskuva" class="hero-image" style="width:100%;height:auto;border-radius:16px" />
 </div>
-*Hups. kuvassa pieni kirjoitusvirhe "AIDA".*
+>*Kuvan AIDA-merkintä korjataan seuraavassa versiossa.*
 
 ## AIDE‑arkkitehtuuri - Kolme tasoa
 <br>
@@ -38,7 +38,7 @@ Tämä taso ohjaa koko ohjelmistokehityksen elinkaarta vaihe vaiheelta. Se varmi
 Workflow toimii kuin projektin liikennevalo: seuraavaan vaiheeseen ei siirrytä ennen kuin laatuportit täyttyvät.
 
 ### Deterministinen Engine – Luotettava perusta
-Arkkitehtuurin alin taso on AIDE:n turvaverkko. Se pakottaa kaiken agenttien tuottaman materiaalin sääntöjen, validointien, testien ja turvaskannausten läpi. Moottori takaa, että samasta syötteestä syntyy aina sama, turvallinen ja ennustettava lopputulos — ilman hallusinaatioita, hyppyjä prosessissa tai tietoturvariskejä.
+Arkkitehtuurin alin taso on AIDE:n turvaverkko. Se ohjaa agenttien tuottamat muutokset sääntöjen, validointien, testien ja turvaskannausten läpi. Moottori varmistaa, että agentin tuottama lopputulos täyttää määritellyt turvallisuus-, validointi- ja testausvaatimukset ennen hyväksymistä.
 
 ---
 
@@ -46,8 +46,8 @@ Arkkitehtuurin alin taso on AIDE:n turvaverkko. Se pakottaa kaiken agenttien tuo
 
 AIDE toimii käytännön laboratoriona, jossa tutkin neljää keskeistä osa‑aluetta modernissa agenttipohjaisessa ohjelmistokehityksessä:
 
-### 1. Agenttikerros (Älykäs osaaminen)
-Kerros vastaa tehtävien analysoinnista, koodin generoinnista ja ratkaisujen validoinnista roolitettujen agenttien kautta.
+### 1. Agenttien konteksti ja osaaminen (Älykäs osaaminen)
+Tutkimusalue keskittyy tehtävien analysointiin, koodin generointiin ja ratkaisujen validointiin roolitettujen agenttien kautta.
 
 **Kokeilut**
 
@@ -62,13 +62,12 @@ Kerros vastaa tehtävien analysoinnista, koodin generoinnista ja ratkaisujen val
 
 ---
 
-### 2. Valvonta- ja laadunvarmistuskerros (Determinismi)
-Tämä kerros valvoo agentin toimintaa ja varmistaa koodin laadun automaattisilla testeillä ja staattisella analyysilla.
+### 2. Valvonta ja laadunvarmistus (Determinismi)
+Tämä tutkimusalue keskittyy agentin toiminnan valvontaan ja koodin laadun varmistamiseen automaattisilla testeillä ja staattisella analyysilla.
 
 **Kokeilut**
 
-- **Self-Healing Loop:** Syötän agentille tahallaan virheellistä koodia.  
-  AIDE ajaa testit (pytest / npm test), kerää virhelokit ja pakottaa agentin automaattiseen korjaussilmukkaan, kunnes koodi läpäisee testit (Exit Code 0).
+- **Self-Healing Loop:** Syötän agentille tahallaan virheellistä koodia. AIDE ajaa testit (pytest / npm test), kerää virhelokit ja välittää havaitut virheet takaisin agentille korjauskierrosta varten. Tavoitteena on toistaa sykli, kunnes määritellyt testit läpäistään (Exit Code 0).
 - **Staattinen analyysi:** Testaan linttereitä, tyyppitarkistimia ja analysoin, miten agentti reagoi eri virheluokkiin.
 
 **Osaamistavoitteet**
@@ -80,12 +79,12 @@ Tämä kerros valvoo agentin toimintaa ja varmistaa koodin laadun automaattisill
 
 ---
 
-### 3. Ajo- ja eristyskerros (Turvallisuus & Suoritus)
-Agentin tuottamaa koodia ei koskaan ajeta suoraan isäntäjärjestelmässä, vaan aina täysin eristetyssä ajoympäristössä.
+### 3. Ajo, eristys ja turvallisuus (Turvallisuus & Suoritus)
+Agentin tuottamaa koodia ei ajeta suoraan isäntäjärjestelmässä, vaan eristetyssä ja rajatussa ajoympäristössä.
 
 **Kokeilut**
 
-- **Sandbox Lab:** Tutkin eri koodausagenttien käyttäytymistä, kun suoritusympäristö lukitaan täysin eristettyyn Docker- tai MicroVM-konttiin ilman ulkoista verkoyhteyttä (network_mode="none").
+- **Sandbox Lab:** Tutkin eri koodausagenttien käyttäytymistä, kun suoritusympäristö lukitaan eristettyyn Docker- tai MicroVM-pohjaiseen ajoympäristöön ilman ulkoista verkkoyhteyttä (network_mode="none").
 
 **Osaamistavoitteet**
 
@@ -96,9 +95,9 @@ Agentin tuottamaa koodia ei koskaan ajeta suoraan isäntäjärjestelmässä, vaa
 
 ---
 
-### 4. Syöte- ja tuloskerros (Rajapinnat & Lokitus)
+### 4. Rajapinnat, lokitus ja jäljitettävyys
 
-Kerros hallinnoi käyttäjän syötteitä (kehotteet, koodipohjat) ja järjestelmän tuottamia tuloksia (koodimuutokset, testiraportit, lokitiedostot).
+Tämä tutkimusalue keskittyy käyttäjän syötteiden (kehotteet, koodipohjat)ja järjestelmän tuottamien tulosten hallintaan (koodimuutokset, testiraportit, lokitiedostot).
 
 **Kokeilut**
 
@@ -114,5 +113,3 @@ Kerros hallinnoi käyttäjän syötteitä (kehotteet, koodipohjat) ja järjestel
 - Jäljitettävyyden ja läpinäkyvyyden varmistaminen
 
 ---
-
-
